@@ -18,9 +18,8 @@
                     <ul>
                         <li><a href="index.html">HOME</a></li>
                         <li><a href="about.html">ABOUT US</a></li>
-                        <li><a href="Projects.html">PROJECTS</a></li>
                         <li><a href="contact.html">CONTACT US</a></li>
-                        <li><a href="">PORTAL LOGIN</a></li>
+                        <li><a href="https://portal.soarlearn.org">PORTAL LOGIN</a></li>
                     </ul>
 
                 </div>
@@ -44,17 +43,15 @@
     <script>
         function sendEmail(){
             Email.send({
-                Host : "smtp.yourisp.com",
-                Username : "username",
-                Password : "password",
-                To : 'them@website.com',
-                From : document.getElementById("email").value,
-                Subject : "New Contact Form Enquiry",
+                SecureToken: "01f7dd80-5b9f-492a-9265-0a01bd988891", 
+                To : 'wang1024x768@gmail.com',
+                From : 'wang1024x768@gmail.com',
+                Subject : document.getElementById("email").value + ": New Contact Form Enquiry",
                 Body : "Name: " + document.getElementById("name").value
                 + "<br> Email: " + document.getElementById("email").value
                 + "<br> Message: " + document.getElementById("message").value
             }).then(
-            message => alert("Form")
+            message => alert(message)
             );
         } 
     </script>
@@ -72,7 +69,7 @@
         <li><a href="#"><i class="fa fa-youtube"></i></a></li>
     </ul>
     <div class="footer-bottom">
-        <p>copyright &copy;2022 SOAR. Designed by Ashvath Suresh Kumar</p>
+        <p>&copy; 2022 SOAR. All Rights Reserved. <a style="color: white;" href="https://github.com/soar-learn/soardescriptorsite">Source code</a></p>
     </div>
 </section>
     </body>
